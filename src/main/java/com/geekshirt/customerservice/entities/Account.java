@@ -19,11 +19,14 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private Long id;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "ADDRESS_ID", referencedColumnName = "ID")
     private Address address;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "CUSTOMER_ID", referencedColumnName = "ID")
     private Customer customer;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "CREDIT_CARD_ID", referencedColumnName = "ID")
     private CreditCard creditCard;
     @Column(name = "STATUS")
     @Enumerated(value = EnumType.STRING)

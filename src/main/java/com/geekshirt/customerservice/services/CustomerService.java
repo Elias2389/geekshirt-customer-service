@@ -18,4 +18,12 @@ public class CustomerService {
         Optional<Account> account = accountRepository.findById(id);
         return account.orElseThrow(() -> new AccountNotFoundException(id.toString()));
     }
+
+    public Account saveAccount(Account account) {
+        return accountRepository.save(account);
+    }
+
+    public void deleteAccount(Account account) {
+        accountRepository.delete(account);
+    }
 }

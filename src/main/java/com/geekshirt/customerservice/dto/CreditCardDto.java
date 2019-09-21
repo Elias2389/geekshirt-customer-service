@@ -8,6 +8,7 @@ public class CreditCardDto {
     private String nameOnCard;
     private String number;
     private String type;
-    private String exporationMonth;
-    private String exporationYear;
+    private String expirationMonth;
+    private String expirationYear;
+    private String ccv;
 }

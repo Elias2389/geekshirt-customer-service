@@ -25,9 +25,9 @@ public class CreditCard {
     @Column(name = "CARD_TYPE")
     private String cardType;
     @Column(name = "EXP_MONTH")
-    private String exporationMonth;
+    private String expirationMonth;
     @Column(name = "EXP_YEAR")
-    private String exporationYear;
+    private String expirationYear;
     @Column(name = "CCV")
     private String ccv;
 }
